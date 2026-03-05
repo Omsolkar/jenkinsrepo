@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+               git "https://github.com/Omsolkar/jenkinsrepo.git"
+            }
+        }
+        stage('build') {
+            steps {
+                bat 'javac Hello.java'
+            }
+        }
+            stage('execute') {
+            steps {
+                bat 'java.Hello'
+            }
+        }
+    }
+}
