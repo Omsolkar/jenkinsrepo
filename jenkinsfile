@@ -14,7 +14,7 @@ pipeline {
         }
             stage('execute') {
             steps {
-                bat 'java.Hello'
+                bat 'java Hello'
             }
         }
     }
